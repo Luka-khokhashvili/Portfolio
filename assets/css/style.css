@@ -374,135 +374,6 @@ nav.navbar.bootsnav .navbar-toggle i {
 /*.single-about-img */
 
 /*-------------------------------------
-        5.  Education
---------------------------------------*/
-
-.education {
-  background: #f9fbfd;
-  padding-top: 50px;
-}
-.education-horizontal-timeline {
-  padding: 80px 0;
-}
-
-/*.education-horizontal-timeline*/
-.education-horizontal-timeline .col-sm-4 {
-  padding: 0 2px;
-}
-
-.single-horizontal-timeline .experience-time h3 {
-  text-transform: capitalize;
-}
-.single-horizontal-timeline .experience-time h3 span {
-  text-transform: lowercase;
-}
-.single-horizontal-timeline .timeline-content h5 {
-  margin: 15px 0;
-}
-.single-horizontal-timeline p {
-  color: #999fb3;
-  max-width: 335px;
-}
-
-/*.timeline-horizontal-border*/
-.timeline-horizontal-border {
-  display: flex;
-  align-items: center;
-  padding: 26px 0 30px;
-}
-.timeline-horizontal-border i {
-  font-size: 10px;
-  color: #d92cf9;
-  margin-right: 5px;
-}
-span.single-timeline-horizontal {
-  display: inline-block;
-  background: #b2c1ce;
-  height: 1px;
-  width: 380px;
-}
-span.single-timeline-horizontal.spacial-horizontal-line {
-  width: 88px;
-}
-/*.timeline-horizontal-border*/
-
-/*.education-horizontal-timeline*/
-
-/*-------------------------------------
-        6.  Skills
---------------------------------------*/
-/* .skills {
-    
-} */
-.skill-content {
-  padding: 50px 0 80px;
-}
-.single-skill-content {
-  padding-top: 100px;
-}
-.section-heading h2 {
-  font-size: 24px;
-  font-weight: 600;
-  text-transform: uppercase;
-  padding-bottom: 50px;
-  border-bottom: 1px solid #e5ebf2;
-}
-.single-progress-txt {
-  display: flex;
-}
-.single-progress-txt h3 {
-  width: 10%;
-  color: #a606c3;
-  position: relative;
-  top: 6px;
-  left: 20px;
-}
-.barWrapper {
-  font-weight: 400;
-  font-size: 16px;
-  text-transform: uppercase;
-  margin-bottom: 25px;
-}
-.progress {
-  border-radius: 3px;
-  overflow: visible;
-  background: #e6ecf3;
-  height: 8px;
-  margin-top: 15px;
-  width: 85%;
-  margin-bottom: 37px;
-}
-.progress-bar {
-  background: #b636ff;
-  border-radius: 3px;
-  -webkit-transition: width 1.5s ease-in-out;
-  -ms-transition: width 1.5s ease-in-out;
-  -moz-transition: width 1.5s ease-in-out;
-  -o-transition: width 1.5s ease-in-out;
-  transition: width 1.5s ease-in-out;
-}
-.tooltip {
-  position: relative;
-  float: right;
-}
-.tooltip > .tooltip-inner {
-  background-color: transparent;
-  padding: 1px 5px;
-  color: #b636ff;
-  font-weight: 500;
-  font-size: 12px;
-  border-radius: 0;
-}
-.popOver + .tooltip > .tooltip-arrow {
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 6px solid #fff;
-  bottom: -1px;
-  transform: translateX(-50%);
-  margin-left: 0;
-}
-
-/*-------------------------------------
         7. Experience
 -------------------------------------*/
 .experience {
@@ -738,6 +609,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  color: #fff;
 }
 .isotope-overlay a {
   display: inline-block;
@@ -753,6 +625,34 @@ span.single-timeline-horizontal.spacial-horizontal-line {
   transform: scale(1);
   top: 0;
 } /*.isotope-overlay*/
+
+/* .see-more-button styles */
+.see-more-button {
+  text-align: center;
+  margin-top: 10px; /* Adjust the margin as needed */
+}
+
+.see-more-button a {
+  display: inline-block;
+  padding: 13px 55px;
+  border: 1px solid #b2c1ce;
+  border-radius: 5px;
+  background: transparent; /* Button background color */
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  /* text-transform: uppercase; */
+  transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.see-more-button a:hover {
+  color: #fff;
+  background: #d92cf9;
+  background: linear-gradient(to right, #d92cf9 0%, #b636ff 100%);
+  transform: scale(1);
+}
+
+
 
 /*-------------------------------------
         10. Clients
