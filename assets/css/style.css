@@ -7,13 +7,10 @@ font-family: 'Poppins', sans-serif;
 2.  Header
 3.  Welcome-hero
 4.  About me 
-5.  Education
-6.  Skill
-7.  Experience
-8.  Profiles
-9.  Portfolio
-10. Clients
-11. Contact
+5.  Experience
+6.  Profiles
+7.  Projects
+8.  Contact
 
 /*-------------------------------------
 		1.General css (Reset code)
@@ -118,7 +115,7 @@ body {
         2. Header
 --------------------------------------*/
 .top-area {
-  position: relative;
+  position: fixed;
   z-index: 9999;
 }
 @media (min-width: 1024px) {
@@ -374,7 +371,7 @@ nav.navbar.bootsnav .navbar-toggle i {
 /*.single-about-img */
 
 /*-------------------------------------
-        7. Experience
+        5. Experience
 -------------------------------------*/
 .experience {
   padding: 50px 0 100px;
@@ -462,7 +459,7 @@ nav.navbar.bootsnav .navbar-toggle i {
   display: none;
 }
 /*-------------------------------------
-        8. Profiles
+        6. Profiles
 --------------------------------------*/
 .profiles {
   padding: 50px 0 100px;
@@ -548,7 +545,7 @@ nav.navbar.bootsnav .navbar-toggle i {
   border: transparent;
 }
 /*-------------------------------------
-        9. Portfolio
+        7. Projects
 --------------------------------------*/
 .portfolio {
   padding: 50px 0 100px;
@@ -557,6 +554,10 @@ nav.navbar.bootsnav .navbar-toggle i {
 
 .portfolio-content {
   padding-top: 100px;
+}
+
+.projects-width {
+  width: 50%;
 }
 
 /* ---- .item ---- */
@@ -574,6 +575,7 @@ nav.navbar.bootsnav .navbar-toggle i {
 .isotope .item img {
   width: 100%;
   height: 100%;
+  border: 5px solid #e5ebf2;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
   -ms-transition: 0.5s;
@@ -652,32 +654,8 @@ nav.navbar.bootsnav .navbar-toggle i {
   transform: scale(1);
 }
 
-
-
 /*-------------------------------------
-        10. Clients
---------------------------------------*/
-.clients {
-  padding-top: 50px;
-}
-.clients-area {
-  display: flex;
-  align-items: center;
-  height: 250px;
-}
-.clients-area .item {
-  padding: 0 25px;
-}
-
-.clients .clients-area .owl-carousel .owl-item img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 0;
-}
-
-/*-------------------------------------
-        11. Contact
+        8. Contact
 --------------------------------------*/
 .contact {
   background: #f9fbfd;
