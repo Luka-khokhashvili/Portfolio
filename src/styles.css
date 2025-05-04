@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+/* styles.css */
+.neon-line {
+  box-shadow: 0 0 10px #6ee7b7, 0 0 20px #6ee7b7, 0 0 30px #6ee7b7;
+}
+
+/* 
+  Background #1E1E2F or #0F0F1A
+Primary #6366F1 (indigo-500)
+Accent #A78BFA (indigo-300) or #6EE7B7 (emerald-300)
+Text #E5E7EB (gray-200)
+*/
