@@ -1,0 +1,47 @@
+<section
+  class="min-h-screen bg-[#0F0F1A] text-gray-200 flex items-center justify-center px-4 py-12"
+>
+  <div
+    class="relative w-full max-w-xl p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md shadow-xl text-center"
+  >
+    <!-- Neon line under title -->
+    <div class="relative mb-6">
+      <h1 class="text-4xl sm:text-5xl font-bold text-indigo-400 relative z-10">
+        Hey, I'm Luka khohashvili
+      </h1>
+      <div
+        class="absolute left-0 bottom-0 w-full h-1 bg-emerald-300 blur-md animate-pulse"
+      ></div>
+    </div>
+
+    <!-- Description -->
+    <p class="text-gray-400 text-lg sm:text-xl mb-6">
+      A Full-Stack Developer crafting clean, scalable, and interactive web
+      experiences.
+    </p>
+
+    <!-- Buttons -->
+    <div class="flex justify-center gap-4">
+      <a
+        (click)="scrollTo('projects')"
+        class="px-6 py-2 rounded-xl bg-indigo-500 hover:bg-indigo-600 text-white transition cursor-pointer"
+      >
+        View Projects
+      </a>
+      <a
+        (click)="scrollTo('projects')"
+        class="px-6 py-2 rounded-xl border border-emerald-300 text-emerald-300 hover:bg-emerald-300 hover:text-black transition cursor-pointer"
+      >
+        Contact Me
+      </a>
+    </div>
+
+    <!-- Optional: Floating neon lines -->
+    <div
+      class="absolute -top-2 -left-2 w-16 h-3 bg-emerald-400 blur-sm animate-pulse"
+    ></div>
+    <div
+      class="absolute -bottom-2 -right-2 w-16 h-3 bg-indigo-400 blur-sm animate-pulse"
+    ></div>
+  </div>
+</section>
