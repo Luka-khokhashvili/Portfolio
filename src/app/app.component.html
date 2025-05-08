@@ -114,27 +114,8 @@
     <app-hero></app-hero>
 
     <app-about></app-about>
-    
-    <!-- Tech Stack -->
-    <section id="tech" class="px-4 py-20 max-w-5xl mx-auto text-white">
-      <h2 class="text-3xl font-bold mb-6 text-center text-indigo-400">
-        Tech Stack
-      </h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-        <div
-          *ngFor="let item of techStack"
-          class="group p-6 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 hover:scale-105 transition shadow"
-        >
-          <p>
-            {{ item }}
 
-            <span
-              class="block max-w-0 group-hover:max-w-[50%] transition-all duration-500 h-0.5 bg-emerald-400"
-            ></span>
-          </p>
-        </div>
-      </div>
-    </section>
+    <app-tech-stack></app-tech-stack>
 
     <section
       id="projects"

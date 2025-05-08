@@ -3,10 +3,18 @@ import { Component, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeroComponent } from './components/hero/hero.component';
 import { AboutComponent } from './components/about/about.component';
+import { TechStackComponent } from './components/tech-stack/tech-stack.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule, HeroComponent, AboutComponent],
+  imports: [
+    RouterOutlet,
+    CommonModule,
+    HeroComponent,
+    AboutComponent,
+    TechStackComponent,
+  ],
+
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
@@ -15,16 +23,18 @@ export class AppComponent {
 
   showScrollTop = false;
 
-  techStack = [
-    'Angular',
-    'Express.js',
-    'Node.js',
-    'React',
-    'TailwindCSS',
-    'TypeScript',
-    'PostgreSQL',
-    'Railway',
-    'Vercel',
+  teckStackIcons = [
+    'svglAngular',
+    'svglExpressjsDark',
+    'svglReact',
+    'svglTailwindcss',
+    'svglTypescript',
+    'svglJavascript',
+    'svglHtml5',
+    'svglCss',
+    'svglPostgresql',
+    'svglRailwayDark',
+    'svglVercelDark',
   ];
 
   projects = [
