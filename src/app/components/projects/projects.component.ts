@@ -21,33 +21,24 @@ export class ProjectsComponent {
       title: 'PC Configurator',
       description: 'Real-time PC build tool with Angular Signals',
     },
-    // Add more as needed
+    {
+      title: 'Room Showcase',
+      description: 'Full-stack project for a construction company',
+    },
   ];
 
   currentIndex = 0;
 
-  get visibleProjects() {
-    return this.projects.slice(0, 3); // Can handle overflow if needed
+  goTo(index: number) {
+    this.currentIndex = index;
   }
 
-  nextCard() {
-    this.currentIndex = (this.currentIndex + 1) % this.projects.length;
-  }
-
-  prevCard() {
+  prev() {
     this.currentIndex =
       (this.currentIndex - 1 + this.projects.length) % this.projects.length;
   }
 
-  getCardTransform(i: number): string {
-    const offset = i - this.currentIndex;
-
-    if (offset === 0) return 'translateY(0) scale(1)';
-    if (offset === 1 || offset === -this.projects.length + 1)
-      return 'translateY(20px) scale(0.95)';
-    if (offset === 2 || offset === -this.projects.length + 2)
-      return 'translateY(40px) scale(0.9)';
-
-    return 'translateY(60px) scale(0.85) opacity(0)';
+  next() {
+    this.currentIndex = (this.currentIndex + 1) % this.projects.length;
   }
 }
