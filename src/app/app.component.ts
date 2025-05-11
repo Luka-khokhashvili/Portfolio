@@ -5,6 +5,7 @@ import { HeroComponent } from './components/hero/hero.component';
 import { AboutComponent } from './components/about/about.component';
 import { TechStackComponent } from './components/tech-stack/tech-stack.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { ContactMeComponent } from './components/contact-me/contact-me.component';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
     AboutComponent,
     TechStackComponent,
     ProjectsComponent,
+    ContactMeComponent,
   ],
 
   templateUrl: './app.component.html',
