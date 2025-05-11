@@ -10,20 +10,33 @@ import { Component } from '@angular/core';
 export class ProjectsComponent {
   projects = [
     {
-      title: 'TechStore App',
-      description: 'E-commerce with Angular, Express, PostgreSQL',
-    },
-    {
-      title: 'NoteKeeper',
-      description: 'Rich-text Angular app for managing daily notes',
+      title: 'G2 Development',
+      description:
+        'Full-stack informational website, built for G2 development with Angular, Express, PostgreSQL',
+      imgsrc: 'G2-ss.png',
+      link: 'https://g2-development.vercel.app/',
+      repo: '',
     },
     {
       title: 'PC Configurator',
       description: 'Real-time PC build tool with Angular Signals',
+      imgsrc: '',
+      link: '',
+      repo: 'https://github.com/Luka-khokhashvili/Pc-configurator-app.git',
+    },
+    {
+      title: 'NoteKeeper',
+      description: 'Rich-text Angular app for managing daily notes',
+      imgsrc: '',
+      link: '',
+      repo: '',
     },
     {
       title: 'Room Showcase',
       description: 'Full-stack project for a construction company',
+      imgsrc: '',
+      link: '',
+      repo: '',
     },
   ];
 
