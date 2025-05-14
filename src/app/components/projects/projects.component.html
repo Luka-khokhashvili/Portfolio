@@ -7,7 +7,11 @@
   </h2>
 
   <!-- Carousel Wrapper -->
-  <div #carousel class="relative w-full max-w-6xl overflow-hidden touch-pan-x">
+  <div
+    (swipeleft)="next()"
+    (swiperight)="prev()"
+    class="relative w-full max-w-6xl overflow-hidden touch-pan-x"
+  >
     <div
       class="flex transition-transform duration-500 ease-in-out"
       [style.transform]="'translateX(-' + currentIndex * 100 + '%)'"
