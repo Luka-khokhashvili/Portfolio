@@ -7,6 +7,7 @@ import {
   svglExpressjsDark,
   svglHtml5,
   svglJavascript,
+  svglJsonSchema,
   svglPostgresql,
   svglRailwayDark,
   svglReact,
@@ -26,6 +27,7 @@ import {
       svglTailwindcss,
       svglTypescript,
       svglJavascript,
+      svglJsonSchema,
       svglHtml5,
       svglCss,
       svglPostgresql,
@@ -55,37 +57,44 @@ export class ProjectsComponent {
         'svglVercelDark',
         'svglRailwayDark',
       ],
+      iconTitles: ['Angular', 'Express.js', 'PostgreSQL', 'Vercel', 'Railway'],
     },
     {
       title: 'PC Configurator',
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      imgsrc: '',
+        'Pc configurator application, Build on Agular, using TypeScript, Router, NgRx and more tools. Please refer to README file for use guide',
+      imgsrc: 'PC-configurator.png',
       link: '',
       repo: 'https://github.com/Luka-khokhashvili/Pc-configurator-app.git',
-      stack: [
-        'svglAngular',
-        'svglExpressjsDark',
-        'svglPostgresql',
-        'svglVercelDark',
-        'svglRailwayDark',
-      ],
+      stack: ['svglAngular', 'svglTypescript', 'svglTailwindcss'],
+      iconTitles: ['Angular', 'TypeScript', 'TailwindCSS'],
     },
     {
-      title: 'NoteKeeper',
-      description: 'Rich-text Angular app for managing daily notes',
-      imgsrc: '',
-      link: '',
-      repo: '',
-    },
-    {
-      title: 'Room Showcase',
-      description: 'Full-stack project for a construction company',
-      imgsrc: '',
-      link: '',
-      repo: '',
+      title: 'NFT Preview Card app',
+      description:
+        'Simple Card component built using React and simple CSS styles',
+      imgsrc: 'NFT-card.png',
+      link: 'https://nft-preview-card-component-nine-flax.vercel.app/',
+      repo: 'https://github.com/Luka-khokhashvili/nft-preview-card-component.git',
+      stack: ['svglReact', 'svglCss', 'svglHtml5', 'svglVercelDark'],
+      iconTitles: ['React', 'CSS', 'HTML5', 'Vercel'],
     },
   ];
+
+  /**
+   * @description
+   * Maps the project stack to an array of objects with names and titles.
+   * The title is the name if no title is provided in the `iconTitles` array.
+   * @param stack {string[]} The project stack as an array of icon names.
+   * @param titles {string[]} The project stack as an array of titles.
+   * @returns {Array<{name: string, title: string}>} An array of objects with names and titles.
+   */
+  getIconPairs(stack: string[], titles: string[]) {
+    return stack.map((name, index) => ({
+      name,
+      title: titles[index] || name,
+    }));
+  }
 
   goTo(index: number) {
     this.currentIndex = index;
