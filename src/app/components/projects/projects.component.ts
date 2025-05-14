@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
-import { Gesture } from '@use-gesture/vanilla';
 import {
   svglAngular,
   svglCss,
@@ -39,8 +38,6 @@ import {
 })
 export class ProjectsComponent {
   expanded = false;
-  @ViewChild('carousel', { static: true })
-  carouselRef!: ElementRef<HTMLDivElement>;
   currentIndex = 0;
 
   projects = [
@@ -89,27 +86,6 @@ export class ProjectsComponent {
       repo: '',
     },
   ];
-
-  ngAfterViewInit() {
-    const gesture = new Gesture(
-      this.carouselRef.nativeElement,
-      {
-        onDragEnd: ({ swipe: [swipeX] }) => {
-          if (swipeX === -1) this.next();
-          if (swipeX === 1) this.prev();
-        },
-      },
-      {
-        drag: {
-          axis: 'x',
-          filterTaps: true,
-          swipe: {
-            distance: 50,
-          },
-        },
-      }
-    );
-  }
 
   goTo(index: number) {
     this.currentIndex = index;
