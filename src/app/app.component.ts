@@ -6,6 +6,8 @@ import { AboutComponent } from './components/about/about.component';
 import { TechStackComponent } from './components/tech-stack/tech-stack.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactMeComponent } from './components/contact-me/contact-me.component';
+import { NgIcon, provideIcons } from '@ng-icons/core';
+import { remixArrowUpDoubleFill } from '@ng-icons/remixicon';
 
 @Component({
   selector: 'app-root',
@@ -17,8 +19,9 @@ import { ContactMeComponent } from './components/contact-me/contact-me.component
     TechStackComponent,
     ProjectsComponent,
     ContactMeComponent,
+    NgIcon,
   ],
-
+  providers: [provideIcons({ remixArrowUpDoubleFill })],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
@@ -26,20 +29,6 @@ export class AppComponent {
   title = 'portfolio';
 
   showScrollTop = false;
-
-  teckStackIcons = [
-    'svglAngular',
-    'svglExpressjsDark',
-    'svglReact',
-    'svglTailwindcss',
-    'svglTypescript',
-    'svglJavascript',
-    'svglHtml5',
-    'svglCss',
-    'svglPostgresql',
-    'svglRailwayDark',
-    'svglVercelDark',
-  ];
 
   @HostListener('window:scroll')
   onScroll() {

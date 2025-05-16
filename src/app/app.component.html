@@ -130,12 +130,17 @@
 
     <!-- Scroll to Top Button -->
     <button
-      class="fixed bottom-6 right-6 bg-[#4effd6] hover:bg-[#38fccc] text-black px-4 py-2 rounded-full shadow-lg transition-opacity duration-300"
+      class="group fixed flex justify-evenly items-center bottom-6 right-6 bg-[#4effd6] hover:bg-[#38fccc] text-black font-semibold px-4 py-2 rounded-full shadow-lg transition-opacity duration-300"
       [class.opacity-0]="!showScrollTop"
       [class.pointer-events-none]="!showScrollTop"
       (click)="scrollToTop()"
     >
-      ↑ Top
+      <ng-icon
+        name="remixArrowUpDoubleFill"
+        size="20px"
+        class="transition-transform duration-300 group-hover:-translate-y-1 group-hover:scale-110"
+      ></ng-icon>
+      Top
     </button>
   </section>
 </section>
