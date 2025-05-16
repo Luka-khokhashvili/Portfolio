@@ -101,9 +101,9 @@
   <div class="flex justify-center items-center mt-6 gap-8 flex-wrap">
     <button
       (click)="prev()"
-      class="text-emerald-300 hover:text-white transition text-sm sm:text-base"
+      class="group flex justify-center items-center text-emerald-300 hover:text-white transition text-sm sm:text-base"
     >
-      ← Prev
+      <ng-icon name="remixArrowLeftSLine" size="20px" class="transition-transform duration-300 group-hover:-translate-x-1 group-hover:scale-110"></ng-icon> Prev
     </button>
 
     <!-- Dots -->
@@ -120,9 +120,9 @@
 
     <button
       (click)="next()"
-      class="text-emerald-300 hover:text-white transition text-sm sm:text-base"
+      class="group flex justify-center items-center text-emerald-300 hover:text-white transition text-sm sm:text-base"
     >
-      Next →
+      Next <ng-icon name="remixArrowRightSLine" size="20px" class="transition-transform duration-300 group-hover:translate-x-1 group-hover:scale-110"></ng-icon>
     </button>
   </div>
 </section>

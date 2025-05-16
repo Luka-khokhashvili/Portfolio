@@ -15,6 +15,7 @@ import {
   svglTypescript,
   svglVercelDark,
 } from '@ng-icons/svgl';
+import { remixArrowLeftSLine, remixArrowRightSLine } from '@ng-icons/remixicon';
 
 @Component({
   selector: 'app-projects',
@@ -33,6 +34,8 @@ import {
       svglRailwayDark,
       svglVercelDark,
       svglExpo,
+      remixArrowLeftSLine,
+      remixArrowRightSLine,
     }),
   ],
   templateUrl: './projects.component.html',
