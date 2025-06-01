@@ -1,27 +1,35 @@
-<!-- Tech Stack -->
-<section id="tech" class="px-4 py-20 max-w-5xl mx-auto text-white">
+<section
+  id="tech"
+  class="px-4 py-20 max-w-7xl mx-auto text-white overflow-hidden"
+>
   <h2 class="text-4xl font-extrabold mb-10 text-center text-indigo-400">
     Tech Stack
   </h2>
 
-  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-    <div
-      *ngFor="let tech of techStack | keyvalue"
-      class="group p-6 rounded-2xl bg-white/5 backdrop-blur-lg border border-white/10 hover:shadow-xl hover:scale-[1.03] transition-transform duration-300 text-center"
-    >
-      <div class="flex justify-center items-center mb-3">
-        <ng-icon
-          [name]="tech.value"
-          size="40px"
-          class="text-emerald-400 group-hover:scale-110 transition-transform duration-300"
-        ></ng-icon>
-      </div>
-      <p class="text-lg font-semibold tracking-wide">
-        {{ tech.key }}
-      </p>
-      <span
-        class="block h-0.5 bg-emerald-400 max-w-0 group-hover:max-w-[60%] transition-all duration-500 mx-auto mt-2"
-      ></span>
+  <div class="relative">
+    <div class="flex w-max animate-scroll gap-6">
+      <!-- Repeat the tech list twice for infinite loop -->
+      <ng-container *ngFor="let _ of [0, 1]">
+        <ng-container *ngFor="let tech of techStack | keyvalue">
+          <div
+            class="group p-6 rounded-2xl bg-white/5 backdrop-blur-lg border border-white/10 hover:shadow-xl hover:scale-[1.03] transition-transform duration-300 text-center w-40 shrink-0"
+          >
+            <div class="flex justify-center items-center mb-3">
+              <ng-icon
+                [name]="tech.value"
+                size="40px"
+                class="text-emerald-400 group-hover:scale-110 transition-transform duration-300"
+              ></ng-icon>
+            </div>
+            <p class="text-sm font-semibold tracking-wide">
+              {{ tech.key }}
+            </p>
+            <span
+              class="block h-0.5 bg-emerald-400 max-w-0 group-hover:max-w-[60%] transition-all duration-500 mx-auto mt-2"
+            ></span>
+          </div>
+        </ng-container>
+      </ng-container>
     </div>
   </div>
 </section>

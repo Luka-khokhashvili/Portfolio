@@ -50,4 +50,8 @@ export class TechStackComponent {
     Railway: 'svglRailwayDark',
     Vercel: 'svglVercelDark',
   };
+
+  get techEntries() {
+    return Object.entries(this.techStack);
+  }
 }
