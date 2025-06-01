@@ -8,6 +8,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactMeComponent } from './components/contact-me/contact-me.component';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { remixArrowUpDoubleFill } from '@ng-icons/remixicon';
+import { NeonNameComponent } from './components/helpers/neon-name/neon-name.component';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,7 @@ import { remixArrowUpDoubleFill } from '@ng-icons/remixicon';
     ProjectsComponent,
     ContactMeComponent,
     NgIcon,
+    NeonNameComponent,
   ],
   providers: [provideIcons({ remixArrowUpDoubleFill })],
   templateUrl: './app.component.html',
@@ -27,7 +29,6 @@ import { remixArrowUpDoubleFill } from '@ng-icons/remixicon';
 })
 export class AppComponent {
   title = 'portfolio';
-
   showScrollTop = false;
 
   @HostListener('window:scroll')

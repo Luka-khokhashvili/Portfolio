@@ -1,0 +1,18 @@
+<div class="fixed inset-0 flex justify-center items-center">
+  <h1
+    class="text-[6vw] uppercase flex flex-wrap justify-center gap-x-6 font-bold blur-sm tracking-wide"
+  >
+    <ng-container *ngFor="let char of name; let i = index">
+      <span
+        [ngClass]="{
+          'text-emerald-300 drop-shadow-[0_0_10px_#34d399]': i !== activeIndex,
+          'text-indigo-500 drop-shadow-[0_0_15px_#818cf8] scale-125':
+            i === activeIndex
+        }"
+        class="transition-all duration-300"
+      >
+        {{ char === " " ? "\u00A0" : char }}
+      </span>
+    </ng-container>
+  </h1>
+</div>
