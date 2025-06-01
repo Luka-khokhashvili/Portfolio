@@ -8,7 +8,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactMeComponent } from './components/contact-me/contact-me.component';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { remixArrowUpDoubleFill } from '@ng-icons/remixicon';
-import { NeonNameComponent } from './components/helpers/neon-name/neon-name.component';
+import { NeonArtComponent } from './components/art/neon-art/neon-art.component';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +21,7 @@ import { NeonNameComponent } from './components/helpers/neon-name/neon-name.comp
     ProjectsComponent,
     ContactMeComponent,
     NgIcon,
-    NeonNameComponent,
+    NeonArtComponent,
   ],
   providers: [provideIcons({ remixArrowUpDoubleFill })],
   templateUrl: './app.component.html',

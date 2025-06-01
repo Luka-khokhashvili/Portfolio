@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NeonNameComponent } from './neon-name.component';
+import { NeonArtComponent } from './neon-art.component';
 
-describe('NeonNameComponent', () => {
-  let component: NeonNameComponent;
-  let fixture: ComponentFixture<NeonNameComponent>;
+describe('NeonArtComponent', () => {
+  let component: NeonArtComponent;
+  let fixture: ComponentFixture<NeonArtComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NeonNameComponent]
+      imports: [NeonArtComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(NeonNameComponent);
+    fixture = TestBed.createComponent(NeonArtComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
