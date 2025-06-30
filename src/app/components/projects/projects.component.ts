@@ -11,6 +11,7 @@ import {
   svglPostgresql,
   svglRailwayDark,
   svglReact,
+  svglSass,
   svglTailwindcss,
   svglTypescript,
   svglVercelDark,
@@ -34,6 +35,7 @@ import {
       svglJavascript,
       svglHtml5,
       svglCss,
+      svglSass,
       svglPostgresql,
       svglRailwayDark,
       svglVercelDark,
@@ -66,6 +68,31 @@ export class ProjectsComponent {
         'svglRailwayDark',
       ],
       iconTitles: ['Angular', 'Express.js', 'PostgreSQL', 'Vercel', 'Railway'],
+    },
+    {
+      title: 'User Dashboard',
+      description:
+        'A simple Angular dashboard that displays a list of users, their posts, and their todo lists. Page has search functionality',
+      imgsrc: 'User-Dashboard.png',
+      link: 'https://angular-internship-task.vercel.app',
+      repo: 'https://github.com/Luka-khokhashvili/Angular-Internship-Task.git',
+      stack: ['svglAngular', 'svglTypescript', 'svglSass', 'svglVercelDark'],
+      iconTitles: ['Angular', 'Typescript', 'SCSS', 'Vercel'],
+    },
+    {
+      title: 'Job Listing app',
+      description:
+        'Simple Job listing page, with filtering and searching capabilites',
+      imgsrc: 'NFT-card.png',
+      link: 'https://job-listings-app-gold.vercel.app',
+      repo: 'https://github.com/Luka-khokhashvili/job-listings-app.git',
+      stack: [
+        'svglAngular',
+        'svglTypescript',
+        'svglTailwindcss',
+        'svglVercelDark',
+      ],
+      iconTitles: ['Angular', 'Typescript', 'Tailwind', 'Vercel'],
     },
     {
       title: 'PC Configurator',
