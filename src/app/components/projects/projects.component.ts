@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import {
   svglAngular,
@@ -83,7 +83,7 @@ export class ProjectsComponent {
       title: 'Job Listing app',
       description:
         'Simple Job listing page, with filtering and searching capabilites',
-      imgsrc: 'NFT-card.png',
+      imgsrc: 'Job-list.jpg',
       link: 'https://job-listings-app-gold.vercel.app',
       repo: 'https://github.com/Luka-khokhashvili/job-listings-app.git',
       stack: [
@@ -117,30 +117,43 @@ export class ProjectsComponent {
   ];
 
   /**
-   * @description
    * Maps the project stack to an array of objects with names and titles.
-   * The title is the name if no title is provided in the `iconTitles` array.
-   * @param stack {string[]} The project stack as an array of icon names.
-   * @param titles {string[]} The project stack as an array of titles.
-   * @returns {Array<{name: string, title: string}>} An array of objects with names and titles.
+   * The title is the name if no title is provided in the iconTitles array.
    */
-  getIconPairs(stack: string[], titles: string[]) {
-    return stack.map((name, index) => ({
-      name,
-      title: titles[index] || name,
+  getIconPairs(projectStack: string[], iconTitles: string[]) {
+    return projectStack.map((iconName, index) => ({
+      name: iconName,
+      title: iconTitles[index] || iconName,
     }));
   }
 
-  goTo(index: number) {
+  goToProjectIndex(index: number) {
     this.currentIndex = index;
   }
 
-  prev() {
-    this.currentIndex =
-      (this.currentIndex - 1 + this.projects.length) % this.projects.length;
+  previous() {
+    if (this.currentIndex > 0) {
+      this.currentIndex--;
+    }
   }
 
   next() {
-    this.currentIndex = (this.currentIndex + 1) % this.projects.length;
+    if (this.currentIndex < this.projects.length - 1) {
+      this.currentIndex++;
+    }
+  }
+
+  @HostListener('window:keydown', ['$event'])
+  handleKeyboardNavigation(event: KeyboardEvent): void {
+    switch (event.key) {
+      case 'ArrowLeft':
+        this.previous();
+        break;
+      case 'ArrowRight':
+        this.next();
+        break;
+    }
+
+    event.preventDefault();
   }
 }
